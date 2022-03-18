@@ -30,11 +30,11 @@ var swiper = new Swiper('.mySwiper1', {
     el: '.swiper-pagination',
   },
   breakpoints: {
-    640: {
+    320: {
       slidesPerView: 1,
     },
-    768: {
-      slidesPerView: 1,
+    800: {
+      slidesPerView: 2,
     },
     1024: {
       slidesPerView: 3,
@@ -53,15 +53,4 @@ var swiper = new Swiper('.mySwiper2', {
   pagination: {
     el: '.swiper-pagination',
   },
-  breakpoints: {
-    640: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 1,
-    },
-    1024: {
-      slidesPerView: 1,
-    },
-  }
 });
