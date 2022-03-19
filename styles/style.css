@@ -41,15 +41,16 @@ a{
 .header_menu{
     background: #FFFFFF;
 }
-.header_menu > .wrapper{
+.header_menu > .wrapper{/*//////////////////////////////////////////*/
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 .adress{
     flex: 0 0 100%;
     position: absolute;
     top: 420px;
-    left: 15px;
+    left: 0;
 }
 .adress > a{
     display: block;
@@ -60,7 +61,7 @@ a{
     text-align: left;
     position: absolute;
     top: 508px;
-    left: 15px;
+    left: 0;
 }
 .telephone > a{
     display: block;
@@ -71,7 +72,7 @@ a{
     text-align: left;
     position: absolute;
     top: 596px;
-    left: 15px;
+    left: 0;
 }
 .sosial > a{
     display: block;
@@ -89,7 +90,7 @@ a{
 .sosial > .sosial_list{
     margin: 0 0 30px 0;
 }
-.sosial > .sosial_list > li{
+.sosial > .sosial_list > a{
     margin: 0 25px 0 0;
 }
 .adress > a::before{
@@ -116,7 +117,7 @@ a{
     text-align: left;
     color: #333333;
 }
-.header_menu > .wrapper > .horizon_flex > li > a, .header_menu > .wrapper > .horizon_flex > li > div > a{
+.header_menu > .wrapper > .horizon_flex > div > a, .header_menu > .wrapper > .horizon_flex > div > nav > a{
     text-align: left;
     color: #333333;
     font-size: 14px;
@@ -132,7 +133,7 @@ a{
     flex: 0 0 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 305px 0;
+    padding: 0 0 30px 0;
     position: relative;
 }
 .header_menu > .wrapper > .horizon_flex > .logo{
@@ -160,8 +161,11 @@ a{
     top: 14px;
     right: 15px;
 }
-.header_menu > .wrapper > .horizon_flex > li{
+.header_menu > .wrapper > .horizon_flex > div{
     width: 100%;
+}
+.header_menu > .wrapper > .horizon_flex > .sosial_list{
+    margin: 254px 0 0 0;
 }
 .links_header_menu{
     display: flex;
@@ -183,7 +187,7 @@ a{
 .links_header_menu > a + a{
     margin: 24px 0 0 0;
 }
-.header_menu > .wrapper > .horizon_flex > li > .enroll{
+.header_menu > .wrapper > .horizon_flex > div > .enroll{
     display: none;
 }
 .enroll{
@@ -212,16 +216,15 @@ a{
     border-right: 1px solid #282C71;
     text-transform: uppercase;
 }
-.header_menu > .wrapper > .horizon_flex > .lenguage > a + a{
-    color: #B71F27;
-}
-.header_menu > .wrapper > .horizon_flex > .lenguage > a:first-child{
-    display: none;
+.header_menu > .wrapper > .horizon_flex > .lenguage > a{
+    color: #04041D;
 }
 .header_menu > .wrapper > .horizon_flex > .lenguage > a:last-child{
-    color: #04041D;
     padding-right: 0;
     border: none;
+}
+.header_menu > .wrapper > .horizon_flex > .lenguage > .active{
+    color: #B71F27;
 }
 .mySwiper > .swiper-wrapper{
     padding: 0 0 45px 0;
@@ -277,10 +280,12 @@ a{
     justify-content: space-between;
 }
 .wrap_flex > div{
-    text-align: center;
     max-width: 400px;
     margin: 0 auto 30px;
     flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .wrap_flex > div > img{
     margin: 0;
@@ -294,7 +299,7 @@ a{
     letter-spacing: 0em;
     text-align: center;
     display: block;
-    min-height: 50px;
+    min-height: 90px;
     padding: 17px 30px 20px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 1px 1px #d9d9d9;
@@ -377,7 +382,6 @@ article > .wrapper > div > p{
     width: 116px;   
 }
 .benefits > .wrapper > div > div > p{
-    font-size: 14px;
     line-height: 19px;
     letter-spacing: 0em;
     text-align: center;
@@ -403,7 +407,8 @@ article > .wrapper > div > p{
     font-size: 35px;
     line-height: 41px;
     letter-spacing: 0em;
-    text-align: center;    
+    text-align: center;
+    margin: 30px 0 20px;
 }
 .mySwiper1 > .swiper-wrapper > .swiper-slide > p{
     font-size: 16px;
@@ -530,20 +535,30 @@ article > .wrapper > div > p{
     top: 17%;
     left: 30%;
 }
+.map_comment{
+    position: relative;
+}
 .map_comment > *{
     margin: 30px 0;
     max-width: 370px;
+}
+.map_comment > div{
+    display: flex;
+    align-items: center;
 }
 .map_comment > h3{
     font-size: 30px;
     line-height: 35px;
     letter-spacing: 0em;
-    text-align: center;
+    text-align: left;
     color: #282C71;
 }
-.map_comment > a{
+.map_comment > div > svg{
+    width: 24px;
+}
+.map_comment > div > a{
     position: relative;
-    padding: 0 0 0 33px;
+    padding: 0 0 0 15px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
@@ -551,50 +566,26 @@ article > .wrapper > div > p{
     color: #333333;
     display: block;
 }
-.map_comment > .adress_filiaa::before{
-    content: "";
-    background: url('../image/css_sprites.png') -10px -362px;
-    height: 25px;
-    width: 18px;
-    position: absolute;
-    top: 20%;
-    left: 0;
+.map_filia_kharkiv > .map_comment > div{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}/*
+.map_filia_kharkiv > .map_comment > .sosial_list{
+    justify-content: flex-end;
 }
-.map_comment > a::before{
-    content: "";
-    background: url('../image/css_sprites.png') -48px -362px;
-    height: 22px;
-    width: 18px;
-    position: absolute;
-    top: -5%;
-    left: 0;
-}
+.map_filia_kharkiv > .map_comment > .sosial_list > a{
+    margin: 0 0 0 30px;
+    padding: 0;
+}*/
 .sosial_list{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
-.sosial_list > li{
-    content: "";
-    background: url('../image/css_sprites.png') -456px -243px no-repeat;
-    min-height: 25px;
-    width: 25px;
+.map_comment > .sosial_list > a{
     margin: 0 30px 0 0;
+    padding: 0;
 }
-.sosial_list > li + li{
-    content: "";
-    background: url('../image/css_sprites.png') -411px -199px no-repeat;
-}
-.sosial_list > li + li + li{
-    content: "";
-    background: url('../image/css_sprites.png') -456px -199px no-repeat;
-}
-.sosial_list > li + li + li + li{
-    content: "";
-    background: url('../image/css_sprites.png') -411px -244px no-repeat;
-    margin: 0;
-}
-
 .consult{
     border-bottom: 2px solid #282C71;
     margin-bottom: 30px;
@@ -639,6 +630,10 @@ article > .wrapper > div > p{
     text-align: center;
     padding: 11px 68px;
     min-width: auto;
+}
+.consult > .wrapper > form > input[type = "submit"]:hover{
+    cursor: pointer;
+    background: #111168;
 }
 .footer_menu{
     justify-content: center;
@@ -702,7 +697,6 @@ article > .wrapper > div > p{
 .footer_links > a, .footer_menu > .telephone > a, .footer_menu > .adress > a, .footer_menu > .adress > .sosial_list{
     margin-bottom: 30px;
 }
-/*////_////_////_MEDIA_////_////_////*/
 @media (min-width: 560px) {
     .wrap_flex > div{
         flex: 0 0 48%;
@@ -792,30 +786,35 @@ article > .wrapper > div > p{
         padding: 0;
     }
     .adress{
-        flex: 0 0 29%;/*//////////////////// edited ////////////////////*/
+        flex: 0 0 40%;/*//////////////////// edited ////////////////////*/
         margin: 15px 0;
         position: static;
     }
     .adress > a{
-        display: inline;
-        margin: 0 21px 0 28px;
+        margin: 0 21px 10px 28px;
+        flex: 0 0 100%;
     }
     .telephone{
-        flex: 0 0 70%;/*//////////////////// edited ////////////////////*/
+        flex: 0 0 60%;/*//////////////////// edited ////////////////////*/
         text-align: end;
         margin: 15px 0;
         position: static;
     }
     .telephone > a{
-        display: inline;
-        margin: 0 0 0 88px;
+        margin: 0 0 10px 88px;
     }
     .header_menu > .wrapper > .telephone > .submit{
-        display: inline;
+        display: block;
         padding: 9px 32px;
         color: #FFFFFF;
         background: #282C71;
         border-radius: 25px;
+        position: absolute;
+        right: 0;
+        transform: translateY(15%);
+    }
+    .header_menu > .wrapper > .telephone > .submit:hover{
+        background: #111168;
     }
     .sosial{
         display: none;
@@ -850,12 +849,12 @@ article > .wrapper > div > p{
     .header_menu > .wrapper > .horizon_flex > .lenguage > a:hover{
         color: #282C71;
     }
-    .header_menu > .wrapper > .horizon_flex > li > a, .header_menu > .wrapper > .horizon_flex > li > div > a{
+    .header_menu > .wrapper > .horizon_flex > div > a, .header_menu > .wrapper > .horizon_flex > div > nav > a{
         font-size: 16px;
         font-weight: 600;
         color: #282C71;
     }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a + a{
+    .header_menu > .wrapper > .horizon_flex > .lenguage > .active{
         color: #282C71;
     }
     .header_menu > .wrapper > .horizon_flex > .lenguage{
@@ -869,18 +868,18 @@ article > .wrapper > div > p{
     .header_menu > .wrapper > .horizon_flex > .lenguage > a:first-child{
         display: inline;
     }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a:last-child{
+    .header_menu > .wrapper > .horizon_flex > .lenguage > a{
         color: #909090;
     }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a:last-child:hover{
+    .header_menu > .wrapper > .horizon_flex > .lenguage > a:hover{
         color: #282C71;
     }
-    .header_menu > .wrapper > .horizon_flex > li > .enroll{
+    .header_menu > .wrapper > .horizon_flex > div > .enroll{
         display: block;
         color: #FFFFFF;
         flex: 0 0 29%;
     }
-    .header_menu > .wrapper > .horizon_flex > li{
+    .header_menu > .wrapper > .horizon_flex > div{
         width: auto;
     }
     article > .wrapper{
@@ -894,9 +893,11 @@ article > .wrapper > div > p{
         margin: 30px 0 30px 30px;
         display: block;
     }
+    .benefits > .wrapper > div > div > p{
+        font-size: 16px;
+    }
     .map{
         max-width: 50%;
-        margin: 0 30px 0 0;
     }
     .map_filia{
         justify-content: flex-start;
@@ -904,14 +905,18 @@ article > .wrapper > div > p{
     .map_filia_kharkiv > .map{
         margin: 0 0 0 30px;
     }
-    .map_comment > li > h3{
-        text-align: left;
+    .map_filia_kharkiv > .map_comment > div{
+        justify-content: flex-end;
+        flex-direction: row;
     }
-    .map_filia_kharkiv > .map_comment > li > h3{
+    .map_filia_kharkiv > .map_comment > h3{
         text-align: right;
     }
     .sosial_list{
         justify-content: flex-start;
+    }
+    .header_menu > .wrapper > .horizon_flex > .sosial_list{
+        display: none;
     }
     .map_filia_kharkiv{
         justify-content: flex-end;
@@ -923,30 +928,35 @@ article > .wrapper > div > p{
         left: 38%;
         transform: scaleX(-1);
     }
-    .map_filia_kharkiv > .map_comment > li > a{
+    .map_filia_kharkiv > .map_comment > div >  a{
         text-align: right;
         padding: 0 33px 0 0; 
     }
-    .map_filia_kharkiv > .map_comment > li > a::before{
-        content: "";
-        background: url('../image/css_sprites.png') -10px -362px;
-        height: 25px;
-        width: 18px;
-        position: absolute;
-        top: 0;
-        left: calc(100% - 18px);
-    }
-    .map_filia_kharkiv > .map_comment > li + li + li > a::before{
-        content: "";
-        background: url('../image/css_sprites.png') -48px -362px;
-        height: 22px;
-        width: 18px;
-        position: absolute;
-        top: -5%;
-        left: calc(100% - 18px);
-    }
-    .map_filia_kharkiv > .map_comment > li > .sosial_list{
+    .map_filia_kharkiv > .map_comment > .sosial_list{
         justify-content: flex-end;
+    }
+    .map_filia_kharkiv > .map_comment > .sosial_list > a{
+        margin: 0 0 0 30px;
+        padding: 0;
+    }
+}
+@media (min-width: 946px) {
+    .map{
+        margin: 0 30px 0 0;
+    }
+}
+@media (min-width: 1200px) {
+    .header_menu > .wrapper > .horizon_flex > .logo{
+        flex: 0 0 15%;
+    }
+    .header_menu > .wrapper > .horizon_flex > .lenguage{
+        flex: 0 0 13%;
+    }
+    .header_menu > .wrapper > .horizon_flex > .links_header_menu_wrapper{
+        flex: 0 0 53%;
+    }
+    .header_menu > .wrapper > .horizon_flex > div{
+        flex: 0 0 18%;
     }
 }
 @media (min-width: 1300px) {
@@ -986,28 +996,16 @@ article > .wrapper > div > p{
         margin: 0 0 0 88px;
     }
     .header_menu > .wrapper > .telephone > .submit{
-        display: inline;
-        padding: 9px 32px;
-        color: #FFFFFF;
-        background: #282C71;
-        border-radius: 25px;
+        transform: translateY(-23%);
+        right: 40%;
     }
     .sosial{
         display: none;
     }
     .header_menu > .wrapper > .horizon_flex > .logo{
         flex: 0 0 15%;
-        text-align: left;
-        border-bottom: none;
         margin-bottom: 0;
     }
-    .header_menu > .wrapper > .horizon_flex > .logo::after{
-        display: none;
-    }
-    .header_menu > .wrapper > .horizon_flex > .logo::before{
-        display: none;
-    }
-
     .links_header_menu{
         flex: 0 0 50%;
         margin: 0;
@@ -1020,31 +1018,8 @@ article > .wrapper > div > p{
     .links_header_menu > .conacts_menu_link{
         display: block;
     }
-    .links_header_menu > li + li{
-        margin: 0 0 0 50px;
-    }
-
-    .header_menu > .wrapper > .horizon_flex > li > a, .header_menu > .wrapper > .horizon_flex > ul > li > a{
-        font-size: 16px;
-        font-weight: 600;
-        color: #282C71;
-    }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a + a{
-        color: #282C71;
-    }
     .header_menu > .wrapper > .horizon_flex > .lenguage{
         flex: 0 0 12%;
-        padding: 0;
-        border-bottom: none;
-    }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a{
-        text-transform: none;
-    }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a:first-child{
-        display: inline;
-    }
-    .header_menu > .wrapper > .horizon_flex > .lenguage > a:last-child{
-        color: #909090;
     }
     article > .wrapper{
         flex-wrap: nowrap;
@@ -1059,9 +1034,6 @@ article > .wrapper > div > p{
     }
     .benefits > .wrapper > div > div{
         margin: 0 15px 30px;
-    }
-    .benefits > .wrapper > div > div > p{
-        font-size: 16px;
     }
     .mySwiper1{
         padding: 0 45px 45px;
