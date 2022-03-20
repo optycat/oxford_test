@@ -27,23 +27,23 @@ var swiper = new Swiper('.mySwiper1', {
     prevEl: ".swiper-button-prev1",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination1',
   },
   breakpoints: {
     320: {
       slidesPerView: 1,
     },
-    800: {
+    500: {
       slidesPerView: 2,
     },
-    1024: {
+    900: {
       slidesPerView: 3,
     },
   }
 });
 var swiper = new Swiper('.mySwiper2', {
   slidesPerView: 1,
-  spaceBetween: 45,
+  /*spaceBetween: 45,*/
   clickable: true,
   loop: true,
   navigation: {
@@ -51,6 +51,6 @@ var swiper = new Swiper('.mySwiper2', {
     prevEl: ".swiper-button-prev2",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination2',
   },
 });

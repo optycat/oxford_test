@@ -37,6 +37,7 @@ a{
     text-decoration: none;
     letter-spacing: 0em;
     position: relative;
+    font-feature-settings: 'pnum' on, 'lnum' on;
 }
 .header_menu{
     background: #FFFFFF;
@@ -101,6 +102,7 @@ a{
     position: absolute;
     left: -28px;
     top: 0;
+    transform: translateY(-4px);
 }
 .telephone > a + a::before{
     content: "";
@@ -110,12 +112,14 @@ a{
     position: absolute;
     left: -28px;
     top: 0;
+    transform: translateY(-3px);
 }
 .header_menu > .wrapper > .adress > a, .header_menu > .wrapper > .telephone > a, .header_menu > .wrapper > .sosial > a{
     font-weight: 400;
     line-height: 20px;
     text-align: left;
     color: #333333;
+    max-width: 220px;
 }
 .header_menu > .wrapper > .horizon_flex > div > a, .header_menu > .wrapper > .horizon_flex > div > nav > a{
     text-align: left;
@@ -130,7 +134,7 @@ a{
 .horizon_flex{
     display: flex;
     flex-wrap: wrap;
-    flex: 0 0 100%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 0 0 30px 0;
@@ -230,7 +234,10 @@ a{
     padding: 0 0 45px 0;
 }
 #swiper-pagination{
-    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -10px;
 }
 .mySwiper > .swiper-wrapper > .swiper-slide{
     background: url('../image/banner1.jpg') 0% 0% / cover;
@@ -274,6 +281,9 @@ a{
     max-width: 200px;
     text-align: center;
 }
+.mySwiper > .swiper-pagination > .swiper-pagination-bullet{
+    margin: 20px 12px;
+}
 .wrap_flex{
     display: flex;
     flex-wrap: wrap;
@@ -298,8 +308,10 @@ a{
     line-height: 23px;
     letter-spacing: 0em;
     text-align: center;
-    display: block;
-    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
     padding: 17px 30px 20px;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 1px 1px #d9d9d9;
@@ -386,6 +398,9 @@ article > .wrapper > div > p{
     letter-spacing: 0em;
     text-align: center;
 }
+.swiper-pagination-bullets{
+    display: block;
+}
 .mySwiper1 {
     padding: 0 0 30px;
 }
@@ -438,12 +453,15 @@ article > .wrapper > div > p{
     left: 6px;
     transform: rotate(45deg);
 }
+.mySwiper1 > .swiper-pagination1 > .swiper-pagination-bullet{
+    margin: 20px 7px;
+}
 .mySwiper2 > .swiper-wrapper > .swiper-slide > img{
     border-radius: 50%;
 }
 .mySwiper2 > .swiper-wrapper > .swiper-slide > article{
     display: block;
-    margin: 0;
+    margin: 30px 0;
 }
 .mySwiper2 > .swiper-wrapper > .swiper-slide > article > h3{
     font-size: 26px;
@@ -469,13 +487,22 @@ article > .wrapper > div > p{
     line-height: 19px;
     letter-spacing: 0em;
     text-align: center;
-    max-width: 570px;
+    max-width: 540px;
 }
 .mySwiper2 > .swiper-wrapper > .swiper-slide{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    box-shadow: 0 1px 1px #d9d9d9;
+    margin: 0 44px;
+    width: calc(100% - 88px) !important;
+}
+.mySwiper2 > .swiper-pagination2 > .swiper-pagination-bullet-active{
+    background: #282C71;
+}
+.mySwiper2 > .swiper-pagination2 > .swiper-pagination-bullet{
+    margin: 20px 7px;
 }
 .swiper-button-next2, .swiper-button-prev2{
     display: none;
@@ -554,7 +581,7 @@ article > .wrapper > div > p{
     color: #282C71;
 }
 .map_comment > div > svg{
-    width: 24px;
+    min-width: 24px;
 }
 .map_comment > div > a{
     position: relative;
@@ -569,21 +596,16 @@ article > .wrapper > div > p{
 .map_filia_kharkiv > .map_comment > div{
     flex-direction: row-reverse;
     justify-content: flex-end;
-}/*
-.map_filia_kharkiv > .map_comment > .sosial_list{
-    justify-content: flex-end;
 }
-.map_filia_kharkiv > .map_comment > .sosial_list > a{
-    margin: 0 0 0 30px;
-    padding: 0;
-}*/
 .sosial_list{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.map_comment > .sosial_list > a{
+.sosial_list > a{
     margin: 0 30px 0 0;
+}
+.map_comment > .sosial_list > a{
     padding: 0;
 }
 .consult{
@@ -677,7 +699,7 @@ article > .wrapper > div > p{
     width: 30px;
     position: absolute;
     left: -35px;
-    top: -5px;
+    top: -3px;
 }
 .footer_menu > .telephone > a{
     margin: 0;
@@ -697,9 +719,20 @@ article > .wrapper > div > p{
 .footer_links > a, .footer_menu > .telephone > a, .footer_menu > .adress > a, .footer_menu > .adress > .sosial_list{
     margin-bottom: 30px;
 }
+@media (min-width: 425px) {
+    .footer_menu > .adress{
+        margin: 0 0 0 60px;
+    }
+    .footer_menu > .telephone{
+        margin: 0 0 0 60px;
+    }
+}
 @media (min-width: 560px) {
     .wrap_flex > div{
         flex: 0 0 48%;
+    }
+    .wrap_flex > div > p{
+        min-height: 90px;
     }
     .benefits > .wrapper > div > div {
         flex: 0 0 48%;
@@ -710,11 +743,13 @@ article > .wrapper > div > p{
     .map{
         margin: 0 auto;
     }
+    .map_filia_kharkiv > .map{
+        margin: 0 auto;
+    }
     .consult > .wrapper > form > input{
         min-width: 400px;
     }
     .consult > .wrapper > form {
-        align-items: flex-start;
         margin: 0 auto;
     }
     .footer_menu{
@@ -726,16 +761,33 @@ article > .wrapper > div > p{
     }
     .footer_menu > .adress{
         position: static;
+        margin: 0;
     }
     .footer_menu > .telephone{
         position: static;
         flex: auto;
-        margin: 0 0 0 50px;
+        margin: 0 0 0 30px;
+    }
+}
+@media (min-width: 690px) {
+    .wrap_flex > div > p{
+        min-height: 67px;
+    }
+    .benefits > .wrapper > div > div {
+        flex: 0 0 50%;
+    }
+}
+@media (min-width: 720px) {
+    .benefits > .wrapper > div > div {
+        flex: 0 0 48%;
     }
 }
 @media (min-width: 800px) {
     .wrap_flex > div{
         flex: 0 0 32%;
+    }
+    .wrap_flex > div > p{
+        min-height: 91px;
     }
     .benefits > .wrapper > div > div{
         flex: 0 0 30%;
@@ -748,11 +800,10 @@ article > .wrapper > div > p{
         flex: 0 0 30%;
     }
     .footer_menu > .adress{
-        flex: 0 0 20%;
+        flex: 0 0 22%;
     }
     .footer_menu > .telephone{
         flex: 0 0 15%;
-        margin: 0;
     }
     .footer_menu > .telephone > a, .footer_menu > .adress > a{
         display: block;
@@ -762,9 +813,6 @@ article > .wrapper > div > p{
     }
 }
 @media (min-width: 865px) {
-    .mySwiper2 > .swiper-wrapper > .swiper-slide > article{
-        margin: 0 0 0 30px;
-    }
     .mySwiper2 > .swiper-wrapper > .swiper-slide > article > h3{
         font-size: 30px;
         text-align: left;
@@ -786,22 +834,18 @@ article > .wrapper > div > p{
         padding: 0;
     }
     .adress{
-        flex: 0 0 40%;/*//////////////////// edited ////////////////////*/
+        flex: 0 0 81%;
         margin: 15px 0;
         position: static;
     }
     .adress > a{
         margin: 0 21px 10px 28px;
-        flex: 0 0 100%;
     }
     .telephone{
-        flex: 0 0 60%;/*//////////////////// edited ////////////////////*/
+        flex: 0 0 19%;
         text-align: end;
         margin: 15px 0;
         position: static;
-    }
-    .telephone > a{
-        margin: 0 0 10px 88px;
     }
     .header_menu > .wrapper > .telephone > .submit{
         display: block;
@@ -820,7 +864,7 @@ article > .wrapper > div > p{
         display: none;
     }
     .header_menu > .wrapper > .horizon_flex > .logo{
-        flex: 0 0 28%;
+        flex: 0 0 20%;
         text-align: left;
         border-bottom: none;
         margin-bottom: 20px;/*//////////////////// edited ////////////////////*/
@@ -878,9 +922,27 @@ article > .wrapper > div > p{
         display: block;
         color: #FFFFFF;
         flex: 0 0 29%;
+        text-align: center;
     }
     .header_menu > .wrapper > .horizon_flex > div{
         width: auto;
+        flex: 0 0 18%;
+    }
+    .header_menu > .wrapper > .telephone > .submit{
+        transform: translateY(10%);
+        right: 36%;
+    }
+    .mySwiper1 > #swiper-pagination{
+        display: none;
+    }
+    .swiper-button-next1, .swiper-button-prev1{
+        display: block;
+    }
+    .mySwiper1{
+        padding: 0 45px 45px;
+    }
+    .swiper-button-next2, .swiper-button-prev2{
+        display: block;
     }
     article > .wrapper{
         flex-wrap: nowrap;
@@ -939,13 +1001,105 @@ article > .wrapper > div > p{
         margin: 0 0 0 30px;
         padding: 0;
     }
+    .consult > .wrapper > img{
+        max-width: calc(100vw - 500px);
+        margin: 0;
+    }
+    .consult > .wrapper > form {
+        max-width: 420px;
+        align-items: flex-start;
+        margin: 0;
+    }
 }
-@media (min-width: 946px) {
+@media (min-width: 892px) {
+    .mySwiper2 > .swiper-wrapper > .swiper-slide > img{
+        margin: 50px 0;
+    }
+}
+@media (min-width: 952px) {
     .map{
         margin: 0 30px 0 0;
     }
+    .map_filia_kharkiv > .map{
+        margin: 0 0 0 30px;
+    }
+}
+@media (min-width: 960px) {
+    .mySwiper2 > .swiper-wrapper > .swiper-slide > article > p{
+        max-width: 570px;
+    }
+    .mySwiper2 > .swiper-wrapper > .swiper-slide > article{
+        margin: 30px 0 30px 30px;
+    }
+}
+@media (min-width: 995px) {
+    .wrap_flex > div > p{
+        min-height: 69px;
+    }
+}
+@media (min-width: 1000px) {
+    .adress{
+        flex: 0 0 64%;/*//////////////////// edited ////////////////////*/
+    }
+    .telephone{
+        flex: 0 0 36%;/*//////////////////// edited ////////////////////*/
+    }
+    .telephone > a{
+        display: inline;
+        margin: 0 10px 10px 12px;
+    }
+    .adress > a{
+        display: inline;
+        margin: 0 10px 10px 12px;
+    }
+    .header_menu > .wrapper > .telephone > .submit{
+        transform: translateY(-24%);
+        right: 34%;
+    }
+    .mySwiper2 > .swiper-wrapper > .swiper-slide > img{
+        margin: 90px 0;
+    }
+    
+}
+@media (min-width: 1050px) {
+    .telephone > a{
+        display: inline;
+        margin: 0 10px 10px 22px;
+    }
+    .adress > a{
+        display: inline;
+        margin: 0 16px 10px 16px;
+    }
+    .header_menu > .wrapper > .telephone > .submit{
+        transform: translateY(-23%);
+    }
+    .header_menu > .wrapper > .horizon_flex > .links_header_menu_wrapper{
+        flex: 0 0 40%;
+    }
+}
+@media (min-width: 1100px) {
+    .map{
+        margin: 0 140px 0 0;
+    }
+    .map_filia_kharkiv > .map{
+        margin: 0 0 0 140px;
+    }
+}
+@media (min-width: 1130px) {
+    .header_menu > .wrapper > .telephone > .submit{
+        right: 36%;
+    }
+    .telephone > a{
+        margin: 0 0 10px 44px;
+    }
+    .adress > a{
+        margin: 0 21px 10px 28px;
+    }
 }
 @media (min-width: 1200px) {
+    .wrap_flex > div > p{
+        min-height: 46px;
+    }
     .header_menu > .wrapper > .horizon_flex > .logo{
         flex: 0 0 15%;
     }
@@ -953,7 +1107,7 @@ article > .wrapper > div > p{
         flex: 0 0 13%;
     }
     .header_menu > .wrapper > .horizon_flex > .links_header_menu_wrapper{
-        flex: 0 0 53%;
+        flex: 0 0 50%;
     }
     .header_menu > .wrapper > .horizon_flex > div{
         flex: 0 0 18%;
@@ -995,10 +1149,6 @@ article > .wrapper > div > p{
         display: inline;
         margin: 0 0 0 88px;
     }
-    .header_menu > .wrapper > .telephone > .submit{
-        transform: translateY(-23%);
-        right: 40%;
-    }
     .sosial{
         display: none;
     }
@@ -1035,21 +1185,6 @@ article > .wrapper > div > p{
     .benefits > .wrapper > div > div{
         margin: 0 15px 30px;
     }
-    .mySwiper1{
-        padding: 0 45px 45px;
-    }
-    .swiper-button-next1, .swiper-button-prev1{
-        display: block;
-    }
-    .swiper-pagination-bullets{
-        display: none;
-    }
-    .swiper-button-next1, .swiper-button-prev1{
-        display: block;
-    }
-    .swiper-pagination-bullets{
-        display: none;
-    }
     .gallery > .wrapper > span{
         margin: 0 -30px;
     }
@@ -1065,9 +1200,6 @@ article > .wrapper > div > p{
         width: 398px;
         height: 398px;
         margin: 30px 0 0 30px;
-    }
-    .map{
-        margin: 0 140px 0 0;
     }
     .consult > .wrapper{
         margin-bottom: 120px;
