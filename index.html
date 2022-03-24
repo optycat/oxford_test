@@ -417,7 +417,7 @@
                 <input type="text" placeholder="Имя *">
                 <input type="phone" placeholder="Телефон *">
                 <input type="message" placeholder="Сообщение">
-                <input type="submit" value="Оставить заявку ">
+                <input type="submit" class="pop_up_request_button" value="Оставить заявку ">
                 <p>*поля, которые обозначенные звездочкой, обязательны для заполнения</p>
             </form>
         </div>
@@ -479,12 +479,6 @@
             </div>
         </nav>
     </footer>
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.js"
-  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-  crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script/script.js"></script>
         <div class="pop_up_main_bg">
             <div class="pop_up_main_body">
                 <a href="" class="close_pop_up_main"></a>
@@ -498,7 +492,7 @@
             </div>
         </div>
         <div class="fixed_buttons">
-            <button>
+            <button class="pop_up_main_slider_button">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.9583 23.9652C11.588 24.6177 12.2932 25.2558 13.1174 25.7741C13.8875 26.2584 14.9968 26.8911 16.227 27.3829C17.4435 27.8693 18.8581 28.2506 20.2123 28.1506C21.4323 28.0605 22.9102 27.6031 23.8953 27.2569C24.8511 26.921 25.6846 26.3793 26.3944 25.742L27.3376 24.8951C28.3948 23.9458 28.4485 22.3436 27.4574 21.3166L24.4666 18.2171C23.4755 17.1901 21.8151 17.127 20.7579 18.0763L18.2056 20.368C17.8532 20.6845 17.2997 20.6634 16.9694 20.3211L8.59513 11.6426C8.26478 11.3003 8.28265 10.7662 8.63505 10.4498L11.1874 8.15807C12.2446 7.20879 12.2982 5.60666 11.3071 4.57959L8.31631 1.48015C7.32525 0.453087 5.66481 0.390024 4.60761 1.3393L3.66436 2.18625C2.95456 2.82359 2.33488 3.58678 1.91916 4.48236C1.49067 5.40546 0.91196 6.79467 0.731504 7.96209C0.531196 9.25793 0.824282 10.6463 1.24011 11.8516C1.66061 13.0704 2.23543 14.1831 2.68104 14.9586C3.15801 15.7887 3.76731 16.513 4.39696 17.1655L10.9583 23.9652Z" stroke="white" stroke-width="1.12667" stroke-linecap="round"/>
                 </svg>
@@ -551,5 +545,20 @@
                 </ul>
             </button>
         </div>
+        <div class="pop_up_request_bg">
+            <div class="pop_up_request_body">
+                <a href="" class="close_pop_up_request_button"></a>
+                <div>
+                    <h2>Спасибо, Ваша заявка принята </h2>
+                    <p>Наш менеджер перезвонит Вам в ближайшее время</p>
+                </div>
+            </div>
+        </div>
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>

@@ -774,7 +774,7 @@ article > .wrapper > div > p{
     display: none;
 }
 .pop_up_main_body > form{
-    margin: 60px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -784,7 +784,7 @@ article > .wrapper > div > p{
     font-weight: 500;
     letter-spacing: 0em;
     text-align: center;
-    margin: 0 40px;
+    margin: 20px 10px 0;
 }
 .pop_up_main_body > form > p{
     line-height: 19px;
@@ -795,7 +795,7 @@ article > .wrapper > div > p{
 .close_pop_up_main{
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 3px;
 }
 .close_pop_up_main::after{
     content: "";
@@ -804,8 +804,8 @@ article > .wrapper > div > p{
     border-left: #000000 solid 1px;
     transform: rotate(45deg);
     position: absolute;
-    top: 40px;
-    right: 30px;
+    top: 20px;
+    right: 10px;
     cursor: pointer;
 }
 .close_pop_up_main::before{
@@ -815,21 +815,21 @@ article > .wrapper > div > p{
     border-right: #000000 solid 1px;
     transform: rotate(-45deg);
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
 }
 .pop_up_main_body > form > input{
     flex: 0 0 100%;
     margin: 15px 0;
-    width: 100%;
+    width: 90%;
     border: none;
     padding: 5px 0;
     border-bottom: 1px solid #6E727D;
 }
 .pop_up_main_body > form > input[type = "submit"]{
     border: none;
-    padding: 11px 95px;
+    padding: 11px 70px;
     border-radius: 25px;
     background: #B71F27;
     color: #FFFFFF;
@@ -842,6 +842,9 @@ article > .wrapper > div > p{
 .active_slider_pop_up{
     display: block;
 }
+.fixed_buttons_sosial_list.active_slider_pop_up{
+    display: block;
+}
 .disabled{
     display: none;
 }
@@ -850,7 +853,7 @@ article > .wrapper > div > p{
     flex-direction: column;
     position: fixed;
     bottom: 40px;
-    right: 14vw;
+    right: 7vw;
     z-index: 205;
 }
 .fixed_buttons > button{
@@ -873,7 +876,7 @@ article > .wrapper > div > p{
 .fixed_buttons > button > svg + svg{
     position: absolute;
     top: 23%;
-    right: 23%;
+    right: 22%;
     transform: scale(0.6);
 }
 .fixed_buttons > button + button:hover{
@@ -882,25 +885,111 @@ article > .wrapper > div > p{
 .fixed_buttons > button + button:hover > svg{
     transform: scale(-1, 1);
     position: absolute;
-    right: 10px;
+    right: 9px;
 }
 .fixed_buttons > button + button:hover > svg + svg{
     transform: scale(0.6);
 }
 .fixed_buttons_sosial_list{
     margin: 0 50px 0 0;
-    flex-direction: row;
     position: fixed;
     bottom: 50px;
-    right: 200px;
+    right: 6%;
     display: none;
 }
+.fixed_buttons_sosial_list > li{
+    display: inline;
+}
 .fixed_buttons_sosial_list > li > a{
-    margin: 0 40px 0 0;
+    margin: 0px 20px 10px 0;
+    display: block;
+    background: #FFFFFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
 }
 .fixed_buttons_sosial_list > li > a > svg{
     width: 50px;
     height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.fixed_buttons_sosial_list.close_sosial_list{
+    display: flex;
+}
+.pop_up_request_bg{
+    width: 100%;
+    height: 100%;
+    min-height: 1000px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+.pop_up_request_body{
+    max-height: 485px;
+    max-width: 530px;
+    z-index: 1010;
+    border-radius: 25px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%) translateY(25%);
+    display: none;
+}
+.pop_up_request_body > div{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pop_up_request_body > div > h2{
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 0 40px;
+}
+.pop_up_request_body > div > p{
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 20px 0 15px 0;
+}
+.close_pop_up_request_button{
+    position: absolute;
+    top: 5px;
+    right: 3px;
+}
+.close_pop_up_request_button::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-left: #000000 solid 1px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+}
+.close_pop_up_request_button::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-right: #000000 solid 1px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.close_pop_up_request{
+    display: block;
 }
 @media (min-width: 425px) {
     .footer_menu > .adress{
@@ -1201,6 +1290,48 @@ article > .wrapper > div > p{
         max-width: 420px;
         align-items: flex-start;
         margin: 0;
+    }
+    .fixed_buttons_sosial_list > li > a{
+        margin: 0px 50px 10px 0;
+    }
+    .pop_up_main_body > form{
+        margin: 60px;
+    }
+    .pop_up_main_body > form > h2{
+        margin: 0 40px 0 40px;
+    }
+    .close_pop_up_main {
+        right: 6px;
+    }
+    .close_pop_up_main::before{
+        top: 40px;
+        right: 40px;
+    }
+    .close_pop_up_main::after{
+        top: 40px;
+        right: 30px;
+    }
+    .pop_up_main_body > form > input{
+        width: 100%;
+    }
+    .pop_up_main_body > form > input[type = "submit"]{
+        padding: 11px 95px;
+    }
+    .pop_up_request_body > div{
+        margin: 60px;
+    }
+    .close_pop_up_request_button::after{
+        top: 40px;
+        right: 30px;
+    }
+    .close_pop_up_request_button::before{
+        top: 40px;
+        right: 40px;
+    }
+    .close_pop_up_request_button{
+        position: absolute;
+        top: 5px;
+        right: 6px;
     }
 }
 @media (min-width: 892px) {
