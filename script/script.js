@@ -1,5 +1,17 @@
 $( document ).ready(function() {
   $(".menu_open_button").click(function(){
+    $(".links_header_menu_wrapper").toggleClass("disabled");
+    $(".lenguage").toggleClass("disabled");
+    $(".sosial_list").toggleClass("disabled");
+    $(".sosial").toggleClass("disabled");
+    $(".adress").toggleClass("disabled");
+    $(".telephone").toggleClass("disabled");
+    $(".menu_open_button").toggleClass("disabled_menu_open_close_button");
+    /*$(".menu_close_button").removeClass("disabled_menu_open_close_button");*/
+    return false;
+  });
+  /*
+  $(".menu_open_button").click(function(){
     $(".links_header_menu_wrapper").removeClass("disabled");
     $(".lenguage").removeClass("disabled");
     $(".sosial_list").removeClass("disabled");
@@ -7,7 +19,7 @@ $( document ).ready(function() {
     $(".adress").removeClass("disabled");
     $(".telephone").removeClass("disabled");
     $(".menu_open_button").addClass("disabled_menu_open_close_button");
-    $(".menu_close_button").removeClass("disabled_menu_open_close_button");
+    /*$(".menu_close_button").removeClass("disabled_menu_open_close_button");
     return false;
   });
   $(".menu_close_button").click(function(){
@@ -20,7 +32,7 @@ $( document ).ready(function() {
     $(".menu_open_button").removeClass("disabled_menu_open_close_button");
     $(".menu_close_button").addClass("disabled_menu_open_close_button");
     return false;
-  });
+  });*/
 
   $(".pop_up_main_slider_button").click(function(){
     $(".pop_up_main_bg").addClass("active_slider_pop_up");
@@ -59,6 +71,7 @@ $( document ).ready(function() {
     loop: true,
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
     breakpoints: {
       640: {
@@ -83,6 +96,7 @@ $( document ).ready(function() {
     },
     pagination: {
       el: '.swiper-pagination1',
+      clickable: true,
     },
     breakpoints: {
       320: {
@@ -97,7 +111,9 @@ $( document ).ready(function() {
     }
   });
   var swiper = new Swiper('.mySwiper2', {
-    slidesPerView: 1,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 65,
     clickable: true,
     loop: true,
     navigation: {
@@ -106,6 +122,7 @@ $( document ).ready(function() {
     },
     pagination: {
       el: '.swiper-pagination2',
+      clickable: true,
     },
   });
 });

@@ -39,6 +39,18 @@ a{
     position: relative;
     font-feature-settings: 'pnum' on, 'lnum' on;
 }
+input{
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+input:focus-visible{
+    outline: none;
+}
 .header_menu{
     background: #FFFFFF;
 }
@@ -131,28 +143,22 @@ a{
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 30px 0;
     position: relative;
     order: 1;
+    border-bottom: #282C71 1px solid;
+    margin: 0 0 30px 0;
 }
 .header_menu > .wrapper > .horizon_flex > .logo{
-    flex: 0 0 100%;
+    flex: 0 0 97%;
     text-align: center;
-    border-bottom: #282C71 1px solid;
-}
-.menu_close_button{
-    position: absolute;
-    top: 4px;
-    right: 0;
+    order: -1;
 }
 .menu_open_button{
-    position: absolute;
-    top: 0;
-    right: 0;
+    order: 0;
+    height: 20px;
+    width: 20px;
+    margin: 0 0 50px 0;
     display: block;
-}
-.disabled_menu_open_close_button{
-    display: none;
 }
 .menu_open_button::after{
     content: "";
@@ -169,28 +175,16 @@ a{
     width: 17px;
     background: #133355;
     position: absolute;
-    top: 22px;
+    top: 6px;
     right: 0;
 }
-.menu_close_button::after{
-    content: "";
-    height: 1px;
-    width: 17px;
+.menu_open_button.disabled_menu_open_close_button::after{
     transform: rotate(45deg);
-    background: #133355;
-    position: absolute;
-    top: 14px;
-    right: 0;
+    top: 10px;
 }
-.menu_close_button::before{
-    content: "";
-    height: 1px;
-    width: 17px;
+.menu_open_button.disabled_menu_open_close_button::before{
     transform: rotate(-45deg);
-    background: #133355;
-    position: absolute;
-    top: 14px;
-    right: 0;
+    top: 10px;
 }
 .header_menu > .wrapper > .horizon_flex > div{
     width: 100%;
@@ -201,6 +195,7 @@ a{
     flex: 0 0 100%;
     padding: 22px 0;
     flex-direction: column;
+    border-top: #282C71 1px solid;
     border-bottom: #282C71 1px solid;
 }
 .links_header_menu > a{
@@ -223,7 +218,8 @@ a{
     padding: 9px 46px;
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 23px;
     text-align: center;
     color: #FFFFFF;
     border-radius: 25px;
@@ -234,7 +230,6 @@ a{
     flex: 0 0 100%;
     padding: 10px 0;
     text-align: center;
-    border-bottom: #282C71 1px solid;
 }
 .header_menu > .wrapper > .horizon_flex > .lenguage > a{
     font-weight: 400;
@@ -302,7 +297,7 @@ a{
     margin: 15px 0 40px 0;
 }
 .mySwiper > .swiper-wrapper > .swiper-slide > .wrapper > .enroll{
-    max-width: 200px;
+    max-width: 230px;
     text-align: center;
 }
 .mySwiper > .swiper-pagination > .swiper-pagination-bullet{
@@ -462,9 +457,10 @@ article > .wrapper > div > p{
     border-top: #333333 1px solid;
     position: absolute;
     z-index: 1;
-    top: 50%;
+    top: 25%;
     right: 6px;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 .swiper-button-prev_style{
     width: 27px;
@@ -473,9 +469,10 @@ article > .wrapper > div > p{
     border-bottom: #333333 1px solid;
     position: absolute;
     z-index: 1;
-    top: 50%;
+    top: 25%;
     left: 6px;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 .mySwiper1 > .swiper-pagination1 > .swiper-pagination-bullet{
     margin: 20px 7px;
@@ -518,7 +515,9 @@ article > .wrapper > div > p{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 1px 1px #d9d9d9;
+    box-shadow: 0 1px 3px #d9d9d9;
+    background: url("../image/feedback_bg.jpg") no-repeat 100%;
+    width: 90%;
 }
 .mySwiper2 > .swiper-pagination2 > .swiper-pagination-bullet-active{
     background: #282C71;
@@ -528,6 +527,12 @@ article > .wrapper > div > p{
 }
 .swiper-button-next2, .swiper-button-prev2{
     display: none;
+}
+.mySwiper2 > .swiper-button-prev_style{
+    top: 50%;
+}
+.mySwiper2 > .swiper-button-next_style{
+    top: 50%;
 }
 .gallery > .wrapper > span{
     display: flex;
@@ -644,9 +649,11 @@ article > .wrapper > div > p{
     justify-content: center;
     align-items: center;
     margin: 20px 0 0 0;
+    flex: 0 0 100%;
 }
 .consult > .wrapper > img{
-    max-width: calc(100vw - 30px);
+    max-width: 100%;
+    flex: 0 0 100%;
     margin: 0 auto;
 }
 .consult > .wrapper > form > input{
@@ -746,10 +753,10 @@ article > .wrapper > div > p{
     z-index: 1010;
     border-radius: 25px;
     background: #FFFFFF;
-    position: absolute;
-    top: 0;
-    right: 50%;
-    transform: translateX(50%) translateY(25%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     display: none;
 }
 .pop_up_main_body > form{
@@ -814,6 +821,7 @@ article > .wrapper > div > p{
     color: #FFFFFF;
     max-width: 290px;
     margin: 32px 0 0 0;
+    text-align: center;
 }
 .pop_up_main_body > form > input[type = "submit"]:hover{
     cursor: pointer;
@@ -915,10 +923,10 @@ article > .wrapper > div > p{
     z-index: 1010;
     border-radius: 25px;
     background: #FFFFFF;
-    position: absolute;
-    top: 0;
-    right: 50%;
-    transform: translateX(50%) translateY(25%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     display: none;
 }
 .pop_up_request_body > div{
@@ -1076,6 +1084,7 @@ article > .wrapper > div > p{
     .horizon_flex{
         padding: 0;
         order: 3;
+        border: none;
     }
     .adress{
         flex: 0 0 81%;
@@ -1121,7 +1130,7 @@ article > .wrapper > div > p{
         flex: 0 0 72%;
         margin: 0;
         flex-direction: row;
-        border-bottom: none;
+        border: none;
     }
     .links_header_menu > .main_page_menu_link{
         display: none;
@@ -1256,11 +1265,13 @@ article > .wrapper > div > p{
         padding: 0;
     }
     .consult > .wrapper > img{
-        max-width: calc(100vw - 500px);
+        max-width: 50%;
+        flex: 0 0 50%;
         margin: 0;
     }
     .consult > .wrapper > form {
-        max-width: 420px;
+        max-width: 50%;
+        flex: 0 0 50%;
         align-items: flex-start;
         margin: 0;
     }
@@ -1285,6 +1296,8 @@ article > .wrapper > div > p{
         right: 30px;
     }
     .pop_up_main_body > form > input{
+        font-size: 20px;
+        line-height: 23px;
         width: 100%;
     }
     .pop_up_main_body > form > input[type = "submit"]{
@@ -1433,7 +1446,7 @@ article > .wrapper > div > p{
         background: linear-gradient(to bottom, #DEE4E9, #DEE4E9 33%, #F6F6F6 33%);
     }
     .horizon_flex{
-        padding: 0;
+        margin: 0;
     }
     .adress{
         flex: 0 0 44%;
@@ -1511,8 +1524,5 @@ article > .wrapper > div > p{
     }
     .consult > .wrapper{
         margin-bottom: 120px;
-    }
-    .consult > .wrapper > img{
-        max-width: 100%;
     }
 }

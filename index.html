@@ -65,15 +65,14 @@
                 </div>
                 <div class="horizon_flex">
                     <a href="" class="menu_open_button"></a>
-                    <a href="" class="menu_close_button disabled_menu_open_close_button"></a>
                     <div class="logo"><a href="#"><img src="image/logo_250x150.png" alt="logo"></a></div> 
                     <div class="links_header_menu_wrapper disabled">
                         <nav class="links_header_menu">
                             <a href="#" class="main_page_menu_link">Главная</a>
-                            <a href="#" class="programms_header_menu">Программы</a>
+                            <a href="#programms" class="programms_header_menu">Программы</a>
                             <a href="#">Прайс</a>
-                            <a href="#">О нас</a>
-                            <a href="#" class="conacts_menu_link">Контакты</a>
+                            <a href="#about_us">О нас</a>
+                            <a href="#contacts" class="conacts_menu_link">Контакты</a>
                             <a href="#">Тест онлайн</a>
                         </nav>
                     </div>
@@ -115,7 +114,7 @@
             <div class="swiper-pagination" id="swiper-pagination"></div>
         </div>
     </section>
-    <section class="programms">
+    <section id = "programms" class="programms">
         <div class="wrapper">
             <h2>Программы</h2>
             <div class="wrap_flex">
@@ -147,7 +146,7 @@
         </div>
     </section>
     <section>
-        <article>
+        <article id = "about_us">
             <h2>О нас </h2>
             <div class="wrapper">
                 <img src="image/teachers oxford.jpg" alt="teachers oxford">
@@ -288,7 +287,7 @@
             </span>
         </div>
     </section>
-    <section>
+    <section id = "contacts">
         <h2>Контакты</h2>
         <div class="wrapper">
             <div class="map_filia">
@@ -406,7 +405,7 @@
     <section class="consult">
         <h2>Запишитесь на консультацию</h2>
         <div class="wrapper wrap_flex">
-            <img src="image/dog png.jpg" alt="korgi">
+            <img src="image/dog.jpg" alt="korgi">
             <form action="#">
                 <input type="text" placeholder="Имя *">
                 <input type="phone" placeholder="Телефон *">
@@ -473,17 +472,16 @@
             </div>
         </nav>
     </footer>
-        <div class="pop_up_main_bg">
-            <div class="pop_up_main_body">
-                <a href="" class="close_pop_up_main"></a>
-                <form action="#">
-                    <h2>Записаться на занятие </h2>
-                    <p>Наш менеджер перезвонит Вам в ближайшее время</p>
-                    <input type="text" placeholder="Имя *">
-                    <input type="phone" placeholder="Телефон *">
-                    <input type="submit" value="Отправить">
-                </form>
-            </div>
+        <div class="pop_up_main_bg"></div>
+        <div class="pop_up_main_body">
+            <a href="" class="close_pop_up_main"></a>
+            <form action="#">
+                <h2>Записаться на занятие </h2>
+                <p>Наш менеджер перезвонит Вам в ближайшее время</p>
+                <input type="text" placeholder="Имя *">
+                <input type="phone" placeholder="Телефон *">
+                <input type="submit" value="Отправить">
+            </form>
         </div>
         <div class="fixed_buttons">
             <button class="pop_up_main_slider_button">
@@ -539,13 +537,12 @@
                 </ul>
             </button>
         </div>
-        <div class="pop_up_request_bg">
-            <div class="pop_up_request_body">
-                <a href="" class="close_pop_up_request_button"></a>
-                <div>
-                    <h2>Спасибо, Ваша заявка принята </h2>
-                    <p>Наш менеджер перезвонит Вам в ближайшее время</p>
-                </div>
+        <div class="pop_up_request_bg"></div>
+        <div class="pop_up_request_body">
+            <a href="" class="close_pop_up_request_button"></a>
+            <div>
+                <h2>Спасибо, Ваша заявка принята </h2>
+                <p>Наш менеджер перезвонит Вам в ближайшее время</p>
             </div>
         </div>
     <script
