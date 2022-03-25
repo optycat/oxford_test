@@ -137,6 +137,7 @@ a{
 }
 .header_menu > .wrapper > .horizon_flex > .logo{
     flex: 0 0 100%;
+    text-align: center;
     border-bottom: #282C71 1px solid;
 }
 .menu_close_button{
