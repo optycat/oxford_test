@@ -42,16 +42,14 @@ a{
 .header_menu{
     background: #FFFFFF;
 }
-.header_menu > .wrapper{/*//////////////////////////////////////////*/
+.header_menu > .wrapper{
     display: flex;
     flex-wrap: wrap;
     position: relative;
 }
 .adress{
     flex: 0 0 100%;
-    position: absolute;
-    top: 420px;
-    left: 0;
+    order: 2;
 }
 .adress > a{
     display: block;
@@ -60,9 +58,7 @@ a{
 .telephone{
     flex: 0 0 100%;
     text-align: left;
-    position: absolute;
-    top: 508px;
-    left: 0;
+    order: 3;
 }
 .telephone > a{
     display: block;
@@ -71,9 +67,7 @@ a{
 .sosial{
     flex: 0 0 100%;
     text-align: left;
-    position: absolute;
-    top: 596px;
-    left: 0;
+    order: 4;
 }
 .sosial > a{
     display: block;
@@ -139,10 +133,10 @@ a{
     align-items: center;
     padding: 0 0 30px 0;
     position: relative;
+    order: 1;
 }
 .header_menu > .wrapper > .horizon_flex > .logo{
     flex: 0 0 100%;
-    text-align: center;
     border-bottom: #282C71 1px solid;
 }
 .menu_close_button{
@@ -199,9 +193,6 @@ a{
 }
 .header_menu > .wrapper > .horizon_flex > div{
     width: 100%;
-}
-.header_menu > .wrapper > .horizon_flex > .sosial_list{
-    margin: 254px 0 0 0;
 }
 .links_header_menu{
     display: flex;
@@ -502,7 +493,7 @@ article > .wrapper > div > p{
     text-align: center;
     display: block;
     position: relative;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 5px;
     margin: 0 0 20px 24px;
 }
 .mySwiper2 > .swiper-wrapper > .swiper-slide > article > h3::before{
@@ -527,8 +518,6 @@ article > .wrapper > div > p{
     justify-content: center;
     flex-wrap: wrap;
     box-shadow: 0 1px 1px #d9d9d9;
-    margin: 0 44px;
-    width: calc(100% - 88px) !important;
 }
 .mySwiper2 > .swiper-pagination2 > .swiper-pagination-bullet-active{
     background: #282C71;
@@ -698,15 +687,6 @@ article > .wrapper > div > p{
 .footer_menu > li:first-child{
     margin-bottom: 30px;
 }
-.footer_menu > .telephone{
-    position: absolute;
-    top: 300px;
-    left: 30px;
-}
-.footer_menu > .adress{
-    left: 0;
-    top: 470px;
-}
 .footer_links{
     display: flex;
     flex-wrap: wrap;
@@ -720,9 +700,6 @@ article > .wrapper > div > p{
     color: #333333;
     display: flex;
     flex: 0 0 50%;
-}
-.footer_menu > .telephone > .mail{
-    margin: 0 0 30px 5px;
 }
 .footer_menu > .telephone > .mail::before{
     content: "";
@@ -740,6 +717,7 @@ article > .wrapper > div > p{
     line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
+    margin: 0 0 24px 28px;
 }
 .footer_menu > .adress > a{
     color: #333333;
@@ -991,14 +969,6 @@ article > .wrapper > div > p{
 .close_pop_up_request{
     display: block;
 }
-@media (min-width: 425px) {
-    .footer_menu > .adress{
-        margin: 0 0 0 60px;
-    }
-    .footer_menu > .telephone{
-        margin: 0 0 0 60px;
-    }
-}
 @media (min-width: 560px) {
     .wrap_flex > div{
         flex: 0 0 48%;
@@ -1104,11 +1074,11 @@ article > .wrapper > div > p{
     }
     .horizon_flex{
         padding: 0;
+        order: 3;
     }
     .adress{
         flex: 0 0 81%;
         margin: 15px 0;
-        position: static;
     }
     .adress > a{
         margin: 0 21px 10px 28px;
@@ -1117,7 +1087,9 @@ article > .wrapper > div > p{
         flex: 0 0 19%;
         text-align: end;
         margin: 15px 0;
-        position: static;
+    }
+    .telephone > a{
+        margin: 0 21px 10px 0;
     }
     .header_menu > .wrapper > .telephone > .submit{
         display: block;
@@ -1132,14 +1104,11 @@ article > .wrapper > div > p{
     .header_menu > .wrapper > .telephone > .submit:hover{
         background: #111168;
     }
-    .sosial{
-        display: none;
-    }
     .header_menu > .wrapper > .horizon_flex > .logo{
         flex: 0 0 20%;
         text-align: left;
         border-bottom: none;
-        margin-bottom: 20px;/*//////////////////// edited ////////////////////*/
+        margin-bottom: 20px;
     }
     .header_menu > .wrapper > .horizon_flex > .logo::after{
         display: none;
@@ -1206,6 +1175,9 @@ article > .wrapper > div > p{
     }
     .disabled{
         display: block;
+    }
+    .sosial{
+        display: none;
     }
     .menu_open_button{
         display: none;
