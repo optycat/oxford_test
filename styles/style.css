@@ -152,7 +152,7 @@ input:focus-visible{
     margin: 0 0 30px 0;
 }
 .header_menu > .wrapper > .horizon_flex > .logo{
-    flex: 0 0 97%;
+    flex: 0 0 93%;
     text-align: center;
     order: -1;
 }
@@ -656,7 +656,7 @@ article > .wrapper > div > p{
 .consult > .wrapper > img{
     max-width: 100%;
     flex: 0 0 100%;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 .consult > .wrapper > form > input{
     display: block;
