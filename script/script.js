@@ -7,32 +7,8 @@ $( document ).ready(function() {
     $(".adress").toggleClass("disabled");
     $(".telephone").toggleClass("disabled");
     $(".menu_open_button").toggleClass("disabled_menu_open_close_button");
-    /*$(".menu_close_button").removeClass("disabled_menu_open_close_button");*/
     return false;
   });
-  /*
-  $(".menu_open_button").click(function(){
-    $(".links_header_menu_wrapper").removeClass("disabled");
-    $(".lenguage").removeClass("disabled");
-    $(".sosial_list").removeClass("disabled");
-    $(".sosial").removeClass("disabled");
-    $(".adress").removeClass("disabled");
-    $(".telephone").removeClass("disabled");
-    $(".menu_open_button").addClass("disabled_menu_open_close_button");
-    /*$(".menu_close_button").removeClass("disabled_menu_open_close_button");
-    return false;
-  });
-  $(".menu_close_button").click(function(){
-    $(".links_header_menu_wrapper ").addClass("disabled");
-    $(".lenguage").addClass("disabled");
-    $(".sosial_list").addClass("disabled");
-    $(".sosial").addClass("disabled");
-    $(".adress").addClass("disabled");
-    $(".telephone").addClass("disabled");
-    $(".menu_open_button").removeClass("disabled_menu_open_close_button");
-    $(".menu_close_button").addClass("disabled_menu_open_close_button");
-    return false;
-  });*/
 
   $(".pop_up_main_slider_button").click(function(){
     $(".pop_up_main_bg").addClass("active_slider_pop_up");

@@ -127,6 +127,9 @@ input:focus-visible{
     color: #333333;
     max-width: 220px;
 }
+.header_menu > .wrapper > .telephone > .submit{
+    font-weight: 500;
+}
 .header_menu > .wrapper > .horizon_flex > div > a, .header_menu > .wrapper > .horizon_flex > div > nav > a{
     text-align: left;
     color: #333333;
@@ -298,7 +301,6 @@ input:focus-visible{
 }
 .mySwiper > .swiper-wrapper > .swiper-slide > .wrapper > .enroll{
     max-width: 230px;
-    text-align: center;
 }
 .mySwiper > .swiper-pagination > .swiper-pagination-bullet{
     margin: 20px 12px;
@@ -500,7 +502,7 @@ article > .wrapper > div > p{
     height: 24px;
     width: 24px;
     position: absolute;
-    bottom: 7px;
+    bottom: 6px;
     transform: translateX(-150%) translateY(0);
 }
 .mySwiper2 > .swiper-wrapper > .swiper-slide > article > p{
@@ -685,6 +687,12 @@ article > .wrapper > div > p{
 .consult > .wrapper > form > input[type = "submit"]:hover{
     cursor: pointer;
     background: #111168;
+}
+.consult > .wrapper > form > p{
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 .footer_menu{
     justify-content: center;
@@ -1145,6 +1153,7 @@ article > .wrapper > div > p{
         color: #282C71;
     }
     .header_menu > .wrapper > .horizon_flex > div > a, .header_menu > .wrapper > .horizon_flex > div > nav > a{
+        line-height: 19px;
         font-size: 16px;
         font-weight: 600;
         color: #282C71;
@@ -1174,6 +1183,8 @@ article > .wrapper > div > p{
         color: #FFFFFF;
         flex: 0 0 29%;
         text-align: center;
+        line-height: 20px;
+        font-weight: 700;
     }
     .header_menu > .wrapper > .horizon_flex > div{
         width: auto;
